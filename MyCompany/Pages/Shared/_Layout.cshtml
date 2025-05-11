@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+	@await Html.PartialAsync("_MetaPartial")
+	@await Html.PartialAsync("_CssPartial")
+</head>
+<body class="left-sidebar is-preload">
+	<div id="page-wrapper">
+
+		@await Html.PartialAsync("_HeardPartial")
+		<div id="main-wrapper">
+			<div class="wrapper style2">
+				<div class="inner">
+					<div class="container">
+						<div class="row">
+							<header>
+								<!-- Include the sidebar partial -->
+								@await Html.PartialAsync("_SidebarPartial")
+							</header>
+							<main>
+								@RenderBody()
+							</main>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		@await Html.PartialAsync("_FooterPartial")
+	</div>
+	@await Html.PartialAsync("_ScriptsPartial")
+</body>
+</html>
